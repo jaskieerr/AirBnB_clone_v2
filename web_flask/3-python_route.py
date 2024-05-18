@@ -16,11 +16,14 @@ def home():
 def hbnb():
     return "HBNB"
 
+
 @app.route('/c/<text>', strict_slashes=False)
 def cisfun(text):
     text = text.replace('_', ' ')
     return "C {}".format(text)
 
+
+@app.route("/python", strict_slashes=False)
 @app.route("/python/<text>", strict_slashes=False)
 def pythoniscool(text=None):
     if text is not None:
